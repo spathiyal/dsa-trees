@@ -15,6 +15,7 @@ class Tree {
   /** sumValues(): add up all of the values in the tree. */
 
   sumValues() {
+    if (!this.root) return 0;
     let sum = this.root.val;
     function addNodeValue(node) {
       for (let child of node.children) {
@@ -32,6 +33,7 @@ class Tree {
   /** countEvens(): count all of the nodes in the tree with even values. */
 
   countEvens() {
+    if (!this.root) return 0;
     //find the node value is even
     let countEven = this.root.val % 2 === 0 ? 1 : 0;
     function countEvenNodeValue(node) {
@@ -53,6 +55,7 @@ class Tree {
    * whose value is greater than lowerBound. */
 
   numGreater(lowerBound) {
+    if (!this.root) return 0;
     let count = this.root.val > lowerBound ? 1 : 0;
     function countGreatNodeVal(node) {
       for (let child of node.children) {
